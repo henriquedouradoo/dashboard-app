@@ -321,7 +321,7 @@
    padding: var(--card-padding);
    border-radius: var(--card-border-radius);
    margin-top: 1rem;
-   box-sizing: var(--box-shadow);
+   box-shadow: var(--box-shadow);
    display: flex;
    justify-content: space-around;
    flex-wrap: wrap;
