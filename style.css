@@ -1,7 +1,7 @@
  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
  :root{
-    --color-primary: #6C9BCF;
+    --color-primary: #167346;
     --color-danger: #FF0060;
     --color-success: #1B9C85;
     --color-warning: #F7D060;
@@ -181,19 +181,19 @@
     width: 100%;
  }
 
- aside .sidebar a:active{
-    width: 100%;
-    color: var(--color-primary);
-    background-color: var(--color-light);
-    margin-left: 0;
- }
+ aside .sidebar a.active{
+   width: 100%;
+   color: var(--color-primary);
+   background-color: var(--color-light);
+   margin-left: 0;
+}
 
  aside .sidebar a.active::before{
     content: '';
     width: 6px;
     height: 18px;
     background-color: var(--color-primary);
- }
+}
 
  aside .sidebar a.active span{
     color: var(--color-primary) ;
@@ -209,9 +209,97 @@
  }
 
  aside .sidebar .message-count{
-    background-color: var(--color-danger);
+    background-color: var(--color-dark);
     padding: 2px 6px;
     color: var(--color-white);
     font-size: 11px;
     border-radius: var(--border-radius-1);
+ }
+
+ main{
+   margin-top: 1.4rem;
+   font-family: 'Poppins', sans-serif;
+ }
+
+ main .analyse{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 1.6rem;
+
+ }
+
+ main .analyse > div{
+   background-color: var(--color-white);
+   padding: var(--card-padding);
+   border-radius: var(--card-border-radius);
+   margin-top: 1rem;
+   box-shadow: var(--box-shadow);
+   cursor: pointer;
+   transition: all 0.3s ease;
+ }
+
+ main .analyse > div:hover{
+   box-shadow: none;
+
+ }
+
+ main .analyse > div .status{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+ }
+
+ main .analyse h3{
+   margin-left: 0.6rem;
+   font-size: 1rem;
+
+ }
+
+ main .analyse .progresss{
+   position: relative;
+   width: 92px;
+   height: 92px;
+   border-radius: 50%;
+ }
+
+ main .analyse svg{
+   width: 7rem;
+   height: 7rem;
+ }
+
+ main .analyse svg circle{
+   fill: none;
+   stroke-width: 10;
+   stroke-linecap: round;
+   transform: translate(5px, 5px);
+ }
+
+ main .analyse .sales svg circle{
+   stroke: var(--color-success);
+   stroke-dashoffset: -30;
+   stroke-dasharray: 200;
+ }
+
+ main .analyse .searches svg circle{
+   stroke: var(--color-danger);
+   stroke-dashoffset: -30;
+   stroke-dasharray: 200;
+ }
+
+ main .analyse .visits svg circle{
+   stroke: var(--color-primary);
+   stroke-dashoffset: -30;
+   stroke-dasharray: 200;
+ }
+ 
+
+ main .analyse .progresss .percentage{
+   position: absolute;
+   top: -3px;
+   left: -1px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100%;
+   width: 100%;
  }
