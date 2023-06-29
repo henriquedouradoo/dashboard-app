@@ -463,15 +463,15 @@
    box-shadow: none;
 }
 
-.right-section .user-profile img{
-   width: 50%;
+.right-section .user-profile svg{
+   width: 11rem;
    height: auto;
    margin-bottom: 0.8rem;
    border-radius: 10%;
-   margin-left: 24%;
 }
 
 .right-section .user-profile h2{
+   color: #0088ff;
    margin-bottom: 0.2rem;
 
 }
